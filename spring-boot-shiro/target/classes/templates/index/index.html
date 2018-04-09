@@ -1,0 +1,25 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<meta charset="utf-8">
+<head th:include="common/common">
+
+
+<body class="page-header-fixed page-sidebar-closed-hide-logo page-content-white">
+<div th:include="common/topheader :: topheader" class="hiddenTv"></div>
+<div class="clearfix"></div>
+<div class="page-container">
+    <!-- LEFT HEADER -->
+    <div th:include="common/leftheader :: leftheader" class="hiddenTv"></div>
+    <div class="page-content-wrapper">
+        <div class="page-content">
+            <div th:include="common/helpcontrol :: helpcontrol" class="hiddenTv"></div>
+、
+            <!-- PAGE CONTENT -->
+            <div th:include="index/main :: content"></div>
+        </div>
+        <!-- FOOTER -->
+        <div th:include="common/footer" :: footer></div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<div th:fragment="content">
+    <div class="page-bar">
+        <ul class="page-breadcrumb">
+            <li>
+                <a href="/index">元器件管理</a>
+                <i class="fa fa-circle"></i>
+            </li>
+            <li>
+                <span>查询</span>
+            </li>
+        </ul>
+        <div class="page-toolbar">
+            <!-- <div id="dashboard-report-range" class="pull-right tooltips btn btn-sm" data-container="body"
+                  data-placement="bottom" data-original-title="Change dashboard date range">
+                 <i class=""> 今天是星期一</i>&nbsp;
+                 &nbsp;
+                 <i class="">2017-01-02</i>
+             </div>-->
+            <i class="" id="day"> </i>&nbsp;
+            &nbsp;
+            <i class="" id="data"></i>
+        </div>
+    </div>
+    <div class="ui segment">
+        <div class="ui grid">
+            <div class="row">
+                <div class="two wide column"></div>
+                <div class="twelve  wide column"  style=" width: 80%">
+
+
+                    <!-- 从这起飞  -->
+
+                    <div class="sizer content_header">
+                        <form class="ui form">
+                        </form>
+
+                        <div>
+                            <div>
+                                <i class="fa fa-user fa-lg orange"></i>
+                                <span id="usersCount" style="font-size: 100%;"></span>
+                            </div>
+                            </a>
+                            <div class="ui divider"></div>
+                            <form class="ui form">
+                                <div class="three fields">
+                                    <div class="field" style="text-align: left;">
+                                        <label style="font-size: small">元器件名称：</label>
+                                        <input placeholder="手机号" type="text" name="mobile" id="phoneNumber" />
+                                    </div>
+                                    <div class="field" style="text-align: left;">
+
+                                    </div>
+                                    <div class="field" style="text-align: right;">
+                                        <label style="font-size: small">&nbsp;</label>
+                                        <div class="ui primary button" id="addSubmit" onclick="queryBtn()">查询</div>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <table class="ui five column table">
+                                <thead>
+                                <tr>
+                                    <th >
+                                        序号
+                                    </th>
+                                    <th >名称</th>
+                                    <!--<th >-->
+                                        <!--手机／邮箱-->
+                                    <!--</th>-->
+                                    <!--<th >注册来源</th>-->
+                                    <!--<th >注册时间</th>-->
+                                    <!--<th >最后登录时间</th>-->
+                                    <!--<th >操作</th>-->
+                                </tr>
+                                </thead>
+
+                                <tbody id="content">
+                                    <tr>
+                                        <td>1</td>
+                                        <td>1号元器件</td>
+                                    </tr>
+                                </tbody>
+
+                            </table>
+                            <div id="page" class="ui pagination menu" style="align-items: center">
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 这里降落 -->
+
+                </div>
+                <div class="two wide column"></div>
+            </div>
+        </div>
+    </div>
+    <script th:src="@{/js/index/index.js}"></script>
+    <script src="../js/jquery.pagination.js"></script>
+
+</div>
+</html>
